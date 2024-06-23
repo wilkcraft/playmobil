@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playmobil</title>
     <style>
-        /* Estilos generales */
         body {
             background-color: #2F2F2F;
             margin: 0;
@@ -56,7 +55,7 @@
         .image-container .image-item {
             text-align: center;
             max-width: 100%;
-            flex: 1 1 calc(100% - 40px); /* Ocupa todo el ancho por defecto */
+            flex: 1 1 calc(100% - 40px);
             box-sizing: border-box;
         }
         .image-container img {
@@ -73,17 +72,15 @@
             text-decoration: none;
         }
 
-        /* Estilos para pantallas más grandes */
         @media (min-width: 600px) {
             .header h1 {
                 font-size: 2.5em;
             }
             .image-container .image-item {
-                flex: 1 1 calc(50% - 40px); /* Dos columnas en pantallas más grandes */
+                flex: 1 1 calc(50% - 40px);
             }
         }
 
-        /* Estilos para pantallas aún más grandes */
         @media (min-width: 768px) {
             .header {
                 padding: 30px;
@@ -96,7 +93,7 @@
                 padding: 12px 24px;
             }
             .image-container .image-item {
-                flex: 1 1 calc(33.333% - 40px); /* Tres columnas en pantallas aún más grandes */
+                flex: 1 1 calc(33.333% - 40px);
             }
         }
     </style>
@@ -141,6 +138,24 @@
                         <a href="https://www.amazon.es/PLAYMOBIL-Casa-Moderna-Set-Juego/dp/B0014BR688/ref=sr_1_23?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3IY1CJTQQLUQF&dib=eyJ2IjoiMSJ9.KXBMVnOHzDUIOxtSYc5640-CfvdPaYvSBVVvYux6p_hZ3UFQAQlEY1VEkT4rpxTJ2P84SYc2dSmZ6cGf8gW5eX1mTdn72M0ItkBkDvepViJ_gyxeB5mSjSTzN3hH4WHYqAAXF425i_zZ3XbytfRyyeSAKSmbvTtGpBFcmkvy3krWFbGYqVkn-PKyRYqSK6yr5WO4SSo5_Tm6lrkECpfrZWUB2UeE2G24aXG1P_gJzcZss6w4tFmh6zhJwqeq-7-DfkKVo2b9TdcdtwKD686GGKiuT0wAHN8UtEcDgPDQSm4.LQnIK3w6OoIGE1wv1metMcCv3QN7Ngvp3OlvwEajiNc&dib_tag=se&keywords=Playmobil+casa&qid=1719073271&sprefix=playmobil+casa%2Caps%2C190&sr=8-23" target="_blank">Ver en Amazon</a>
                     </div>
                     <div class="image-item">
+                        <img src="https://m.media-amazon.com/images/I/91w58OsoN1L._AC_SX679_.jpg">
+                        <p>PLAYMOBIL 6872 - Policía de Central de Comando con prisión<br> <strong>92,80€</strong></p>
+                        <a href="https://www.amazon.es/Playmobil-City-Action-6872-Juguetes/dp/B01608LOHS/ref=sr_1_33_sspa?dib=eyJ2IjoiMSJ9.5FS3Jfn3ZYY9jdP-4DsZtyu_RWTW26U3dxIb0lIMouAgGIPqnhTOxJ1CU8jmgbrZ8JOxsf42dkHNO5DdsJM6RpfAqCPQt30Vn2GfWnvxINfMdoCPqHXSsM4xjfLv7K3QgvEmeGsw1UzhVzppv-B7JamTb0xUwxk_UHaqkBC1k8A1noyfckP8AlcPcIIaO0MIx3aSuuprJo_A1HYVpigsNcVsr7Zm86vDEuoGFZ34Qm4PI8DXXVERqTxZ0nu0r8sF-yKOcDQJDGiPMnSVgP3lysw2AtFfiGGt1jF5EwMb-hQ.FDj1BQvtKSeHWtBH28Ok5RJQUvC2c3pQcbc1BciOgvY&dib_tag=se&keywords=playmobil+city+life&qid=1719169691&sr=8-33-spons&ufe=app_do%3Aamzn1.fos.5e544547-1f8e-4072-8c08-ed563e39fc7d&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1" target="_blank">Ver en Amazon</a>
+                    </div>
+                `;
+            } else if (category === 'transportes') {
+                container.innerHTML = `
+                    <div class="image-item">
+                        <img src="https://m.media-amazon.com/images/I/81ylUy0GaWS._AC_SX679_.jpg" alt="PLAYMOBIL Colegio 6865">
+                        <p>PLAYMOBIL Private Jet<br> <strong>34,95€</strong></p>
+                        <a href="https://www.amazon.es/PLAYMOBIL-70533-Playmobil-Private-Jet/dp/B08WHJ95SM/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=251U8CRLHEDPB&dib=eyJ2IjoiMSJ9.i2c_9cdG4vXQqnlUiLghFtLpVwoBL3UCIQ-xyZSBtOqXr-xjKdLj1ACDscF72RqQxY5dCEiJXQ0VWYd2YoeiKrVS76-CqpxbPzPYUWe0RgjYIHhZHe8THlgfemaG7tFAIxiaOloouF50cSzjCxfPYzYqbBmxPb3r9Gy360z3tnsTf7vaj079DfbRQC1YLjpBAYx9YOM3-JZyvss9YyUxZXCXZZeg_F29xouh1hP_uGkKHOxDRsZQkujFt4DMqId2e3h7X_Rs8GBKO4d_KhK2Z6svQFkfYj_amkK6iYmsNG4.CZyXH2QvgmRrbyR7EewmRiVG4_DpBDNMmYW2EwmLDCU&dib_tag=se&keywords=playmobil+avi%C3%B3n&qid=1719169813&sprefix=playmobil+avi%C3%B3n%2Caps%2C110&sr=8-5" target="_blank">Ver en Amazon</a>
+                    </div>
+                    <div class="image-item">
+                        <img src="https://m.media-amazon.com/images/I/61GTzx7KVKL._AC_SX679_.jpg">
+                        <p>PLAYMOBIL Family Fun, 6978 Crucero, Incluye Bote Salvavidas Flotante<br> <strong>114,99</strong></p>
+                        <a href="https://www.amazon.es/Playmobil-Crucero-6978/dp/B01EKBCUAW/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VMXKURCV4TLS&dib=eyJ2IjoiMSJ9.GIzMlWjezdQIfOsomFbP1Zb-fuDpMGIg9xi5M_zWEK5ET_BopkRGd1qlFi39qJYSJVT48ZjXEXSVjSApxHPnH9MDzdHDRHj8De4owS-Vc1nXgYSnsEzwmp998zrSvMaiTVRXwU5W-iLG3JnPznqeFZtrFKmld6V_PwY-eztCEFI3D3HwAoJF5HC1QEKUSoynAWV-OgGrucgxmWsFCu8DX9kLG6F21l_c4Pfrr1-yRWDoNoS31UW9Jmn75rSDJQfzThMi0w8qu1Vh5xz1y_UPT6bt-mL7uAUzyfRe5A236HM.H-dTUeQeyLUCXOu5WwjH21BY4udXU8f4JTvHvJ3ad-Y&dib_tag=se&keywords=playmobil+yate&qid=1719169884&sprefix=playmobil+yate%2Caps%2C109&sr=8-7&ufe=app_do%3Aamzn1.fos.5e544547-1f8e-4072-8c08-ed563e39fc7d" target="_blank">Ver en Amazon</a>
+                    </div>
+                    <div class="image-item">
                         <img src="https://m.media-amazon.com/images/I/819USoNHwyL.__AC_SY300_SX300_QL70_ML2_.jpg">
                         <p>PLAYMOBIL City Life 71094 Autobús Escolar US, Autobús de Juguete con luz Intermitente<br> <strong>46,99€</strong></p>
                         <a href="https://www.amazon.es/PLAYMOBIL-Autob%C3%BAs-Escolar-71094-Multicolor/dp/B09P4CTNJH/ref=sr_1_7?crid=N4GXA706U1MM&dib=eyJ2IjoiMSJ9.5FS3Jfn3ZYY9jdP-4DsZt0aC9-NLQurofTsXVm_zQ3bXWhmeSpLFqWUcrzC0n6krryIwq3ke-DZg9YujTaV1osGU2CAZ_Vv9jyI33q6c76qQlhkJ_q3Q2t7NOk2bltrGSfe6jtrQm3OIXp986ieNVE7Y9iGxCHbVHm6N0ktAXmI6-uzgmpLkSf6_2romCtnzrRs3FBvBySVXKJkfMWvMEe-FbvDRrBotqdvI9YkZM2vq_B6qPIHsEAlER_Ogf-uAigC5eDgr2scHoIkY7snr5XQJZBpPiWcstCs8cIFAZc4.qQTkUmGqW65LS1XGE1m7sHYkw2GHWdE44aW500L0pK8&dib_tag=se&keywords=playmobil+city+life&qid=1719073602&s=toys&sprefix=Playmobil+%2Ctoys%2C708&sr=1-7" target="_blank">Ver en Amazon</a>
@@ -159,6 +174,7 @@
             <option value="inicio">Inicio ≡</option>
             <option value="medieval">Medieval ≡</option>
             <option value="ciudad">Ciudad ≡</option>
+            <option value="transportes">Transportes ≡</option>
         </select>
     </header>
     <div class="horizontal-line"></div>
